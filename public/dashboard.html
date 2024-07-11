@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Comfy</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- styles css -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar page">
+      <div class="nav-center">
+        <!-- links -->
+        <div>
+          <button class="toggle-nav">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html" class="nav-link"> home </a>
+            </li>
+            <li>
+              <a href="products.html" class="nav-link"> products </a>
+            </li>
+            <li>
+              <a href="about.html" class="nav-link"> about </a>
+            </li>
+            <li>
+              <a href="dashboard.html" class="nav-link"> dashboard </a>
+            </li>
+          </ul>
+        </div>
+        <!-- logo -->
+        <img src="./images/logo-black.svg" class="nav-logo" alt="logo" />
+      </div>
+    </nav>
+    <!-- hero -->
+    <section class="page-hero">
+      <div class="section-center">
+        <h3 class="page-hero-title">Home / Dashboard</h3>
+      </div>
+    </section>
+    <!-- sidebar -->
+    <div class="sidebar-overlay">
+      <aside class="sidebar">
+        <!-- close -->
+        <button class="sidebar-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <!-- links -->
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html" class="sidebar-link">
+              <i class="fas fa-home fa-fw"></i>
+              home
+            </a>
+          </li>
+          <li>
+            <a href="products.html" class="sidebar-link">
+              <i class="fas fa-couch fa-fw"></i>
+              products
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="sidebar-link">
+              <i class="fas fa-book fa-fw"></i>
+              about
+            </a>
+          </li>
+          <li>
+            <a href="dashboard.html" class="sidebar-link">
+              <i class="fas fa-tachometer-alt fa-fw"></i>
+              dashboard
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="dashboard-container">
+      <!-- add product -->
+      <section class="dashboard-section">
+        <h2>Add Product</h2>
+        <form id="add-product-form">
+          <div class="form-control">
+            <label for="name">Product Name</label>
+            <input type="text" id="name" name="name" required maxlength="100" />
+          </div>
+          <div class="form-control">
+            <label for="price">Price</label>
+            <input type="number" id="price" name="price" required />
+          </div>
+          <div class="form-control">
+            <label for="description">Description</label>
+            <textarea
+              id="description"
+              name="description"
+              required
+              maxlength="1000"
+            ></textarea>
+          </div>
+          <div class="form-control">
+            <label for="image">Image </label>
+            <input type="file" id="image" name="image" />
+          </div>
+          <div class="form-control">
+            <label for="company">Company</label>
+            <select id="company" name="company" required>
+              <option value="ikea">Ikea</option>
+              <option value="liddy">Liddy</option>
+              <option value="marcos">Marcos</option>
+            </select>
+          </div>
+          <button style="width: 400px" type="submit" class="btn">
+            Add Product
+          </button>
+        </form>
+      </section>
+
+      <!-- order history -->
+      <section class="dashboard-section">
+        <h2>Order History</h2>
+        <table class="order-history-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Amount</th>
+              <th>Purchased</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dummy data for now -->
+            <tr>
+              <td>Chair</td>
+              <td>$90</td>
+              <td>7</td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Table</td>
+              <td>$150</td>
+              <td>3</td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Lamp</td>
+              <td>$45</td>
+              <td>5</td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Bed</td>
+              <td>$300</td>
+              <td>2</td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Sofa</td>
+              <td>$500</td>
+              <td>1</td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <script type="module" src="dashboard.js"></script>
+  </body>
+</html>
